@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button type="button" onclick="showProduct(products)">Click me to Show Product</button>
+    <p id="demo"></p>
+    <script>
+        const products = [
+            {
+                id: "0001",
+                name: "THE SIMS 4",
+                price: "฿405.59",
+                img: "img/messageImage_1658207679677.jpg"
+            },
+            {
+                id: '0002',
+                name: "THE SIMS 4 - GET TO WORK",
+                price: "฿766.49",
+                img: "img/messageImage_1658207688772.jpg"
+            },
+            {
+                id: '0003',
+                name: "THE SIMS 4 - GET TOGETHER",
+                price: '฿450.69',
+                img: "img/messageImage_1658207694661.jpg"
+            },
+            {
+                id: '0004',
+                name: "THE SIMS 4 - CITY LIVING",
+                price: '฿676.29',
+                img: "img/messageImage_1658207706421.jpg"
+            },
+            {
+                id: '0005',
+                name: "THE SIMS 4 - CATS AND DOGS",
+                price: '฿676.29',
+                img: "img/messageImage_1658207713397.jpg"
+            },
+            {
+                id: '0006',
+                name: "THE SIMS 4 - SEASONS",
+                price: '฿766.49',
+                img: "img/messageImage_1658207719014.jpg"
+            },
+            {
+                id: '0007',
+                name: "THE SIMS 4 - ISLAND LIVING",
+                price: '฿586.09',
+                img: "img/messageImage_1658207723764.jpg"
+            },
+            {
+                id: '0008',
+                name: "THE SIMS 4 - COTTAGE LIVING",
+                price: '฿992.09',
+                img: "img/messageImage_1658207728104.jpg"
+            },
+            {
+                id: '0009',
+                name: "THE SIMS 4 - VAMPIRES",
+                price: '฿811.69',
+                img: "img/messageImage_1658207733177.jpg"
+            },
+            {
+                id: '0010',
+                name: "THE SIMS 4 - REALM OF MAGIC",
+                price: '฿789.09',
+                img: "img/messageImage_1658207737809.jpg"
+            },
+        ]
+        let text = "<ul>";
+        let x = document.getElementById("demo")
+        products.forEach(showProduct);
+        text += "</ul>";
+        x.innerHTML = text;
+
+        function showProduct(value) {
+            text += `<li>ID: ${value.id} <br>Name: ${value.name} <br>Price: ${value.price} <br><img src=${value.img} width="230" height="298.5"></li>`            
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        } 
+    </script>
+
+
+</body>
+
+</html>
